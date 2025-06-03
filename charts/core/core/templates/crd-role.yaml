@@ -1,4 +1,3 @@
----
 # Source: core/templates/crd-role.yaml
 # ClusterRole for NeuVector to operate CRD
 apiVersion: rbac.authorization.k8s.io/v1
