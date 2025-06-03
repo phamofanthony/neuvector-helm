@@ -1,0 +1,490 @@
+---
+# Source: core/templates/controller-secret.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: neuvector-controller-secret
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+type: Opaque
+data:
+  ssl-cert.key: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NBUUVBeE0ycXhBS3RIVTd5KzJocVhiUURKVUtHNlIwQVJQRkZFSWhXZllzNHZKb1g4MjZDClVzY21PbjZpWU9kcmdlTWVJeUMvTEtUVlpKNFJpUnBSK0dmT0hUN3FPMUpQVzQzOGt1NXBMUXVJOVpQVm1lZEMKd3ZHc1pkQVBTSEU4YWxCV0NTVzF4QzIvZ3hQMGRqVWRLRUdkUDhWV3daT1RkSTNFRkhvUkdnUVkrWXB4UFZkUQpCVzNVZ3dvb2J6Ymc5dENUeFBhT0RKOStPSFg1emRqOTBVckJwZk9zOVYrdXlOVHFaNE80djNIYVRtektVTEJnCkJjY2FCaG5KTXp3Q3h0dWppSWp4VWl1SnVaVGR4a1dSVU4xTjk5SWxRWGRPaHZzQndhTUhxbUU0UlB1Ykl0QTMKTks4UDVLZHNCQlhhbk1HeHNkeDR1TVVhcXUxU2ZLWFV3aHdTeFFJREFRQUJBb0lCQUE5U2ZZOHRXbjgyYUc1ZwpvQUs1SGVpVCtzOGg4ZnJXelB3cDhvL3JobDNsWW1RbnhhK1RyK1hYSlBzYlJyc1NBaG5xaTFwNnRUUXBwcThGCnRLZzh6cnc4cTlNS3NzRXJvZzgvZVcxU0lWWTdXR0tYTWRNSWdBQ3lRa3BaMUpkb3QwdHNNSnE4UHNCQ0RnMmoKcE5McVNZZWs3SDc5a2lTb0xVSUozejhuQ1ZtK01GT2lsWlk0N3hwZzA1UzBNd0NEZ1B4U3orbUpoYS9WZWNDRAo5NDlmV00xdG8xTlBHbU9aM2wrNTJ2N1dUSVJhU0FrMGZCTDdlVVZBWXVja0ZvUG51byszOGF3dmR4bTBiUVpsCnZwTGliRG9rc0c2RVY2WmpERkJaVHJCZ0lPN29zeGNuU0FqbUtCc3oxbXpxWEo2M0g4ZUc5dytiMFgzYUlId3oKR0c2RDRtRUNnWUVBN3M1SDJqSkVHWmRzcW81SFJxZFJIM0hDeE92SEVqd0VSK1NqclNORUNDaGhPb01MTmNhNwpyZ2dYWWhucDltRERFUmhSTVRkZmwzVFFocm9aY0hPSVRmNERXdWI0V3VROU5oSStzeEt6eEJvb01VMEQ4WGgvCmo2cCtjakNGcU9qeVRIclByTTkvUUdodFp1cVJwZ0RiUHVOZ0J2a1BMSk1sMVVabVZFNmtEYVVDZ1lFQTB2a3cKYi9vWWZmL3RET0Y0T0ZGSmZGcFdQeE1BU2dqNGZzbyt3WnozMmkwdnZLN3hFMXBoYXhZMjZBbEpzVDhxVzd6QwpQZzVlRUtDaGl1bUp4c3NrTnpYZE9TQU9TYXZUNHd5WXdRQ3NEbUpqK3M5T0lhZFNlNEhPcktuRTBRTWtIc1VkCjZVWkt1MW95SnpabXVTc3dPelZFdnBXRWczOVpqN2VyL1JUMUpxRUNnWUEvRlA2bUJPRTRZV2V6SmlKdDU0VG0KYVlhcHZoNjRFbUtQR3phaFpjOXkyRGZXM1FiNURhWkdNcHo2clIzQWw0N3YxUnlkZzZNY3Z4N1dlQktBUWdTZgpsWm9OU1RZUnpIamU3N0xnV3ZCaHZRY2cvdGNyMGtqZ0NvbWNZSFR1U1pxMzJUbEN6UTB3Vm1XUDZpYlBVeXFYClVqanJucDhEaDF0WEcyR3NvNWx5Z1FLQmdBOGZvZU5GRUdCbjZqeFVKV1FVSDZwMFoxNWFKRmtxVDNYM1ZZeFgKamtUcm5GSndVQVBOSk5LaVl3azdNVGN0aWdITmhEY2luSWVnbkRQekRkZGNWSnBJbURVeUlSUVM1enVOZVozTQpTSWszY0dkWVdRZDhrU01kYVExamxpSk5rVmRMVmh1VTJHS1owcUtRK2Nnb1dtckVKTXRzdUhVY3VmVGRlOHpHCnBkUkJBb0dCQUw2TmFmOEFZLyt4cDdTK0Y3R3dwNVBxR1pkbDB1THhRZUk3ZGd5VHk2VUZod3pLaFZGYm80VHIKN0FlV21KYjhBaTBPeHp4VEhoNlQwOFJxeDBmZDMwZFFTNG9FQ3pvcmtVOFJZZXphc3ZCMEp1ZUE1VzYvM0tBVQpmSW5rUU9LZ2JFNFJNVUJ0QXluT21TUlpJSEdIY2FWRzcrY2lxRndZMFRidFVRNmNWSGs3Ci0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg==
+  ssl-cert.pem: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURDRENDQWZDZ0F3SUJBZ0lSQUtMSlBxMUdqaThPOUQ4bHg3NExHdlV3RFFZSktvWklodmNOQVFFTEJRQXcKRkRFU01CQUdBMVVFQXhNSmJtVjFkbVZqZEc5eU1CNFhEVEkxTURZd016RTNORGswTVZvWERUSTJNRFl3TXpFMwpORGswTVZvd0ZERVNNQkFHQTFVRUF4TUpibVYxZG1WamRHOXlNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DCkFROEFNSUlCQ2dLQ0FRRUF4TTJxeEFLdEhVN3krMmhxWGJRREpVS0c2UjBBUlBGRkVJaFdmWXM0dkpvWDgyNkMKVXNjbU9uNmlZT2RyZ2VNZUl5Qy9MS1RWWko0UmlScFIrR2ZPSFQ3cU8xSlBXNDM4a3U1cExRdUk5WlBWbWVkQwp3dkdzWmRBUFNIRThhbEJXQ1NXMXhDMi9neFAwZGpVZEtFR2RQOFZXd1pPVGRJM0VGSG9SR2dRWStZcHhQVmRRCkJXM1Vnd29vYnpiZzl0Q1R4UGFPREo5K09IWDV6ZGo5MFVyQnBmT3M5Vit1eU5UcVo0TzR2M0hhVG16S1VMQmcKQmNjYUJobkpNendDeHR1amlJanhVaXVKdVpUZHhrV1JVTjFOOTlJbFFYZE9odnNCd2FNSHFtRTRSUHViSXRBMwpOSzhQNUtkc0JCWGFuTUd4c2R4NHVNVWFxdTFTZktYVXdod1N4UUlEQVFBQm8xVXdVekFPQmdOVkhROEJBZjhFCkJBTUNCYUF3SFFZRFZSMGxCQll3RkFZSUt3WUJCUVVIQXdFR0NDc0dBUVVGQndNQ01Bd0dBMVVkRXdFQi93UUMKTUFBd0ZBWURWUjBSQkEwd0M0SUpibVYxZG1WamRHOXlNQTBHQ1NxR1NJYjNEUUVCQ3dVQUE0SUJBUUNvRitVZgpzOGtSY2VmdFFlZnl2emFENWdyOGM3emp6T0JrWU16cElJT3VYU3JqaDFWUlNRWkNBa0RxQ3NiRGxOMXJma1hDCmNibjVHS2hPZFI3THdNZUNlbmV2N05ScFg5RERlU1I2elBxWUVKSVI3bWdTdEpHWm5YajlTQ3NlbUZHVTdBLzUKcUYxbU0xYzkxanM3UFlHVXJHM1VQektQTFIyTWJlYXJhYmw3TncxTERyMWhMZFhIeEJ3VXhVYVVRSjhySTlrUgplREtLRFNaV0NCdXNpd1VoL01ucEpyZ3pRajIzUDdzWlNaRjg0TlJjb1NaZVFReUh5TEVLakFhSWJ3b21lWDRmClFoMHlpL3ZWTkpHazc3TWNCSlFENWZFY2YyVzFnU1ByejhEVXprdmtlNE9NMG9HcXR2MGhYU1NlTDNYQjNDTkEKTWNiQ0pCSU9xWFVsUVRJWAotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+---
+# Source: core/templates/controller-secret.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: neuvector-internal-certs
+type: Opaque
+---
+# Source: core/templates/manager-secret.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: neuvector-manager-secret
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+type: Opaque
+data:
+  ssl-cert.key: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb2dJQkFBS0NBUUVBdXBtVElvN091dHRRaWVBRHBwMFJuNm1lNEo5YmJwbHBKZTBSdXk5T0FyMHZ1d0ZsCi9oaWFqb2ZYRDVGNDF1eHlucG1Lb0J3RDBwajJJWEpGSHdLRDRiY0NHVE8vN0FqYUtmeFRqQzh1aFZkYXBqWHYKOXJOQWlWbUpJaGhsT3IvQTJDYmxQVW9lUFRNeHJBZ055Y1RMeFAwRFFrMGZlekV0c0FKRFg2ZityQVZLS3NnRAo0bmlnaFpvQkdpaHFGeTdxeVgrVlprR1JicFVhWGZMc1lBTmxOaEUzTHg3V2RrVzhwTVphOTBuZEVpWmkwZ1ZzCnlSQnh3QmUvZ1ZrZmNtSjdLVkdncWs4MUlSVUVuVmpUaWtmZEI5UkMyQ3p2dlFNMStOUVhXTXV1Rm5lLzNVVTYKVHoyaHV2anEwNm45NDFIY3NKTExsaE1JN3puS3U0OGxPbWVkN3dJREFRQUJBb0lCQUFMQ3FkZ05oOFpnM3pDaQo5VHJlUVBmOU1PSCt5WUg1MkFIZEgzR0c4aDc5UUhzQ09zbUhBS1pTSVI3VVZwYkxXYWk1K2NDRG1aVGdlV2VtClFwcUNWWVFkeW5Tbi9OTlhrQzZsMG5DVTlCbTU0SmZyM1ZobmIzRjR0eHdmZzBQYXVWWVpRVFBtYUVzY2VrUWkKdkYxN1FVNXhOYjZoMkhEZ21kM3NNcVgwSE1MYnJLd1FoMGpqWkdYZGZxdWd2S1BKL094aGdSb084NjM0eHIvKwpvYXpsdGRvSjc5NXVTSXdhNGRjWFgwVmVlNHY1TmdPaUlkMTNkdDBubWNzYml4MW9qS1hjazZtbS9zd2piMzE3Cmh4ZVF2YXFtU0JFY2Ftcm1TMkJCZythdzNnVW9pSVMrdDUyN0pKTGR2SmlyNDdWclFFdk1XU0xQZlYzb00yVFUKYkRsTGlOVUNnWUVBeExRSGowY1NZUXN3eDhSTkpVTE9kYlA4SS9wYVpIT0dEUWlPN1dYRlJQdExvbVhXdVJ5SAovR1BzZ1VTdGQxS3RpYWFxS3FxQmxCU0M1UFM3eTZGNXg4NytCUDJ5L0xtWTdNMU5vRnlQMGhxQ2FBNGV3ZFdECmtYQy8zT015ZU9rQll0R0IrUHVkT0xiSGdqc3ExOERpVDc0NVl6UjZVWG9CTWZkQTVMUXlCcTBDZ1lFQTh0bloKMkMxZjFjbnJaSnVYVmg1SEx5VDZ6TVI2bGpucVNrSWxYdEpFeXlOMWR4MTVmNXVrSnZvcEdsTy9xN3ZXMnN0MwpZV0l6YW9MdE1YLzdxdmRxM1RxVXNONjlHN2dYZEdLV3U0bW5XSloxdFhRK0dQWDNMNnl0M2JqY2ZGVlNBbWJ1ClZTVHo1eGwvMTZlTkxPc2dpckJ1QlhPRTNhUVNvQ2I2WnA5YnRvc0NnWUJJODhRQi9ZZnhlZWNEaitoVXMyeEMKOXhmQ2VDMWlKLzVGZ3pFUEZybU5GZTQ5TXF2cVI0eWZyS2VnWWNvOEFPdmZxM0pkRkpPdVNkVXArU0pWS1hRegpDSy9wUmZaR0NNZVF1NnZZbDd1M1hxR1MyZm5LUmRmZjd3TVpkeUhXK2dQTGxJd3h2WS9YNHVJbmlLNGhDcVprCmtOWlQxcml1MHlMeVZ4TTRQeVIybVFLQmdENFo5WG94aUR0TWFsU004VE5GaE9DS2JWUWx2azlpT2dhSlNiTW8KeEF6S1lZUjNWaFdLd0h4ekprV2tPdlI0a1dYYitBaEFLM1BHVFUrR01kNHpiUEZyeEpCQ05VdThWTXNmVnZwWQpKaUlpUDdHS0swTUl5eEEyOFRNc3piMUJ1RG9EQmxsaG5MbHhMTjhCNnJrYzIzSjcwWGExWnJtaTlseGIrMVo0CjArUW5Bb0dBQkY5aFNVZjgzQ1NFWmw5Y2g3ZFc4bExWTlYwNm5xLytxd1NBTm5WSHBtV2JOMzMyS0lwVXYzeUcKc1l5enp2WGErVzgzc29Vd2JHWmtRbzdzNTJrUEYxeVRMaGNCcS9EWWdMTGZjREJvaWxyYzFHdW1iWUdra2JPUQo2NnpPc2VjdFNKTVJtTHZHWnd0NVFxbkhObTVCa2F5elQ1ZjRnYkZBQkdFWnBUOEMrNEE9Ci0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg==
+  ssl-cert.pem: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCekNDQWUrZ0F3SUJBZ0lRRUU3VjB5NmF6RTh6K2NVYzJuZU9BakFOQmdrcWhraUc5dzBCQVFzRkFEQVUKTVJJd0VBWURWUVFERXdsdVpYVjJaV04wYjNJd0hoY05NalV3TmpBek1UYzBPVFF4V2hjTk1qWXdOakF6TVRjMApPVFF4V2pBVU1SSXdFQVlEVlFRREV3bHVaWFYyWldOMGIzSXdnZ0VpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElCCkR3QXdnZ0VLQW9JQkFRQzZtWk1panM2NjIxQ0o0QU9tblJHZnFaN2duMXR1bVdrbDdSRzdMMDRDdlMrN0FXWCsKR0pxT2g5Y1BrWGpXN0hLZW1ZcWdIQVBTbVBZaGNrVWZBb1BodHdJWk03L3NDTm9wL0ZPTUx5NkZWMXFtTmUvMgpzMENKV1lraUdHVTZ2OERZSnVVOVNoNDlNekdzQ0EzSnhNdkUvUU5DVFI5N01TMndBa05mcC82c0JVb3F5QVBpCmVLQ0ZtZ0VhS0dvWEx1ckpmNVZtUVpGdWxScGQ4dXhnQTJVMkVUY3ZIdFoyUmJ5a3hscjNTZDBTSm1MU0JXekoKRUhIQUY3K0JXUjl5WW5zcFVhQ3FUelVoRlFTZFdOT0tSOTBIMUVMWUxPKzlBelg0MUJkWXk2NFdkNy9kUlRwUApQYUc2K09yVHFmM2pVZHl3a3N1V0V3anZPY3E3anlVNlo1M3ZBZ01CQUFHalZUQlRNQTRHQTFVZER3RUIvd1FFCkF3SUZvREFkQmdOVkhTVUVGakFVQmdnckJnRUZCUWNEQVFZSUt3WUJCUVVIQXdJd0RBWURWUjBUQVFIL0JBSXcKQURBVUJnTlZIUkVFRFRBTGdnbHVaWFYyWldOMGIzSXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBS21tcURteAozdEFrdFU5ZnBPY1R3THNOdytIMC9ZanFZQ3JEeGFVdWgxamk3ZDYzcW5sZ3BEWTV4eHB5aXdBTEwvenhnZ080Ck9rcXhQRHVORUV5QnpvMmk2Y0lTYWt5WFJnMmFWOGRtb3RZTUZZN0o1V2NHbEovTk5MMHRSMWRZRk82UCtaOTEKTjBDL0pITDZCZW9HSUVCQWtqMTA5UktZbW4zdkZoQ2NiSWlnRnJSdTkxSis1TlRDT0VsQmtuTjJXTkNIa2JGcAp6YXdkR1VqTy9vZjA0UzFHZ09zd0EwQWQxN0N5aTdrQmVSSnRLYVZTUUIzNUFkRzVxbjJRVU9XOStETjhhS2w0CmpzcFZ0MTZkWmlEM3NSZnhBWEVjZ2NtbXpKNE5lK2x5TERpQnlrT0xmU25MY1NSUGhaNG9rbXRSUnFDZEhRZi8KaHpuLzlRcWg4eDhzcXFzPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+---
+# Source: core/templates/admission-webhook-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: neuvector-svc-admission-webhook
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+spec:
+  ports:
+    - port: 443
+      targetPort: 20443
+      protocol: TCP
+      name: admission-webhook
+  type: ClusterIP
+  selector:
+    app: neuvector-controller-pod
+---
+# Source: core/templates/controller-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: neuvector-svc-controller
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+spec:
+  clusterIP: None
+  ports:
+    - port: 18300
+      protocol: "TCP"
+      name: "cluster-tcp-18300"
+    - port: 18301
+      protocol: "TCP"
+      name: "cluster-tcp-18301"
+    - port: 18301
+      protocol: "UDP"
+      name: "cluster-udp-18301"
+  selector:
+    app: neuvector-controller-pod
+---
+# Source: core/templates/crd-webhook-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: neuvector-svc-crd-webhook
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+spec:
+  ports:
+    - port: 443
+      targetPort: 30443
+      protocol: TCP
+      name: crd-webhook
+  type: ClusterIP
+  selector:
+    app: neuvector-controller-pod
+---
+# Source: core/templates/manager-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: neuvector-service-webui
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8443
+      name: manager
+      protocol: TCP
+  selector:
+    app: neuvector-manager-pod
+---
+# Source: core/templates/enforcer-daemonset.yaml
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: neuvector-enforcer-pod
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+spec:
+  updateStrategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: neuvector-enforcer-pod
+  template:
+    metadata:
+      labels:
+        app: neuvector-enforcer-pod
+        release: neuvector
+    spec:
+      tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/master
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/control-plane
+      hostPID: true
+      serviceAccountName: default
+      serviceAccount: default
+      containers:
+        - name: neuvector-enforcer-pod
+          image: "docker.io/neuvector/enforcer:5.4.4"
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            privileged: true
+          resources:
+            {}
+          env:
+            - name: CLUSTER_JOIN_ADDR
+              value: neuvector-svc-controller.pham-test
+            - name: CLUSTER_ADVERTISED_ADDR
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+            - name: CLUSTER_BIND_ADDR
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+            - name: AUTO_INTERNAL_CERT
+              value: "1"
+          volumeMounts:
+            - mountPath: /lib/modules
+              name: modules-vol
+              readOnly: true
+            - mountPath: /var/nv_debug
+              name: nv-debug
+              readOnly: false
+            - mountPath: /etc/neuvector/certs/internal/
+              name: internal-cert-dir
+      terminationGracePeriodSeconds: 1200
+      restartPolicy: Always
+      volumes:
+        - name: modules-vol
+          hostPath:
+            path: /lib/modules
+        - name: nv-debug
+          hostPath:
+            path: /var/nv_debug
+        - name: internal-cert-dir
+          emptyDir:
+            sizeLimit: 50Mi
+---
+# Source: core/templates/controller-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neuvector-controller-pod
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+spec:
+  replicas: 3
+  minReadySeconds: 60
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: neuvector-controller-pod
+  template:
+    metadata:
+      labels:
+        app: neuvector-controller-pod
+        release: neuvector
+      annotations:
+        checksum/controller-secret: d335d5265393f384340a4e2c513f2f16de18867f9397459d93f432364672ca0f
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - neuvector-controller-pod
+              topologyKey: kubernetes.io/hostname
+            weight: 100
+      serviceAccountName: default
+      serviceAccount: default
+      initContainers:
+        - name: init
+          image: "docker.io/neuvector/controller:5.4.4"
+          command: ["/usr/local/bin/upgrader", "create-upgrader-job" ]
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: OVERRIDE_CHECKSUM
+              value: 1df29f8e4eaca35a1bb198df01aee7685c4d08f982f64134139cf555b28a064e
+      containers:
+        - name: neuvector-controller-pod
+          image: "docker.io/neuvector/controller:5.4.4"
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            runAsUser: 0
+          resources:
+            {}
+          readinessProbe:
+            exec:
+              command:
+                - cat
+                - /tmp/ready
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          env:
+            - name: CLUSTER_JOIN_ADDR
+              value: neuvector-svc-controller.pham-test
+            - name: CLUSTER_ADVERTISED_ADDR
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+            - name: CLUSTER_BIND_ADDR
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+            - name: AUTO_INTERNAL_CERT
+              value: "1"
+          volumeMounts:
+            - mountPath: /etc/config
+              name: config-volume
+              readOnly: true
+            - mountPath: /etc/neuvector/certs/ssl-cert.key
+              subPath: ssl-cert.key
+              name: cert
+              readOnly: true
+            - mountPath: /etc/neuvector/certs/ssl-cert.pem
+              subPath: ssl-cert.pem
+              name: cert
+              readOnly: true
+            - mountPath: /etc/neuvector/certs/internal/
+              name: internal-cert-dir
+      terminationGracePeriodSeconds: 300
+      restartPolicy: Always
+      volumes:
+        - name: config-volume
+          projected:
+            sources:
+              - configMap:
+                  name: neuvector-init
+                  optional: true
+              - secret:
+                  name: neuvector-init
+                  optional: true
+              - secret:
+                  name: neuvector-secret
+                  optional: true
+        - name: cert
+          secret:
+            secretName: neuvector-controller-secret
+        - name: internal-cert-dir
+          emptyDir:
+            sizeLimit: 50Mi
+---
+# Source: core/templates/manager-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neuvector-manager-pod
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: neuvector-manager-pod
+  template:
+    metadata:
+      labels:
+        app: neuvector-manager-pod
+        release: neuvector
+      annotations:
+        checksum/manager-secret: eb5e47ddfe465aa1e1c26124b4bba67e610b3a467ca049e990ded2cee4e6f58d
+    spec:
+      serviceAccountName: default
+      serviceAccount: default
+      containers:
+        - name: neuvector-manager-pod
+          image: "docker.io/neuvector/manager:5.4.4"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8443
+              protocol: TCP
+          env:
+            - name: CTRL_SERVER_IP
+              value: neuvector-svc-controller.pham-test
+          volumeMounts:
+            - mountPath: /etc/neuvector/certs/ssl-cert.key
+              subPath: ssl-cert.key
+              name: cert
+              readOnly: true
+            - mountPath: /etc/neuvector/certs/ssl-cert.pem
+              subPath: ssl-cert.pem
+              name: cert
+              readOnly: true
+          resources:
+            {}
+      restartPolicy: Always
+      volumes:
+        - name: cert
+          secret:
+            secretName: neuvector-manager-secret
+---
+# Source: core/templates/scanner-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neuvector-scanner-pod
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  replicas: 3
+  selector:
+    matchLabels:
+      app: neuvector-scanner-pod
+  template:
+    metadata:
+      labels:
+        app: neuvector-scanner-pod
+    spec:
+      serviceAccountName: default
+      serviceAccount: default
+      containers:
+        - name: neuvector-scanner-pod
+          image: "docker.io/neuvector/scanner:6"
+          imagePullPolicy: Always
+          env:
+            - name: CLUSTER_JOIN_ADDR
+              value: neuvector-svc-controller.pham-test
+            - name: AUTO_INTERNAL_CERT
+              value: "1"
+          resources:
+            {}
+          volumeMounts:
+            - mountPath: /etc/neuvector/certs/internal/
+              name: internal-cert-dir
+      restartPolicy: Always
+      volumes:
+        - name: internal-cert-dir
+          emptyDir:
+            sizeLimit: 50Mi
+---
+# Source: core/templates/updater-cronjob.yaml
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: neuvector-updater-pod
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+spec:
+  schedule: "0 0 * * *"
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            app: neuvector-updater-pod
+            release: neuvector
+        spec:
+          serviceAccountName: default
+          serviceAccount: default
+          containers:
+            - name: neuvector-updater-pod
+              image: "docker.io/neuvector/updater:0.0.3"
+              imagePullPolicy: IfNotPresent
+              resources:
+                {}
+              command:
+              - /bin/sh
+              - -c
+              - /usr/bin/curl -kv -X PATCH -H "Authorization:Bearer $(cat /var/run/secrets/kubernetes.io/serviceaccount/token)" -H "Content-Type:application/strategic-merge-patch+json" -d '{"spec":{"template":{"metadata":{"annotations":{"kubectl.kubernetes.io/restartedAt":"'`date +%Y-%m-%dT%H:%M:%S%z`'"}}}}}' 'https://kubernetes.default/apis/apps/v1/namespaces/pham-test/deployments/neuvector-scanner-pod' 2>&1 | grep -v Bearer
+          restartPolicy: Never
+---
+# Source: core/templates/upgrader-cronjob.yaml
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: neuvector-cert-upgrader-pod
+  namespace: pham-test
+  annotations:
+    cert-upgrader-uid: ""
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+spec:
+  schedule: "0 0 1 1 *"
+  suspend: true
+  concurrencyPolicy: Forbid
+  failedJobsHistoryLimit: 3
+  successfulJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      activeDeadlineSeconds: 3600
+      parallelism: 1
+      completions: 1
+      backoffLimit: 6
+      template:
+        metadata:
+          labels:
+            app: neuvector-cert-upgrader-pod
+            release: neuvector
+        spec:
+          serviceAccountName: default
+          serviceAccount: default
+          restartPolicy: Never
+          containers:
+            - name: neuvector-cert-upgrader-pod
+              image: "docker.io/neuvector/controller:5.4.4"
+              imagePullPolicy: IfNotPresent
+              command: 
+                - /usr/local/bin/upgrader
+                - upgrader-job
+                - --enable-rotation
+              env:
+---
+# Source: core/templates/controller-lease.yaml
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  name: neuvector-controller
+spec:
+  leaseTransitions: 0
+---
+# Source: core/templates/upgrader-lease.yaml
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  name: neuvector-cert-upgrader
+spec:
+  leaseTransitions: 0

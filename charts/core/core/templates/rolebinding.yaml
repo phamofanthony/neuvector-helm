@@ -1,0 +1,109 @@
+---
+# Source: core/templates/rolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: neuvector-admin
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: pham-test
+---
+# Source: core/templates/rolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: neuvector-binding-secret
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: neuvector-binding-secret
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: pham-test
+---
+# Source: core/templates/rolebinding.yaml
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: neuvector-binding-lease
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: neuvector-binding-lease
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: pham-test
+---
+# Source: core/templates/rolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: neuvector-binding-job-creation
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: neuvector-binding-job-creation
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: pham-test
+---
+# Source: core/templates/rolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: neuvector-binding-secret-controller
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: neuvector-binding-secret-controller
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: pham-test
+---
+# Source: core/templates/rolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: neuvector-binding-cert-upgrader
+  namespace: pham-test
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: neuvector-binding-cert-upgrader
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: pham-test

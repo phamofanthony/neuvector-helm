@@ -1,0 +1,279 @@
+---
+# Source: core/templates/crd-role.yaml
+# ClusterRole for NeuVector to operate CRD
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: neuvector-binding-customresourcedefinition
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+rules:
+- apiGroups:
+  - apiextensions.k8s.io
+  resources:
+  - customresourcedefinitions
+  verbs:
+  - update
+  - watch
+  - create
+  - get
+---
+# Source: core/templates/crd-role.yaml
+# ClusterRole for NeuVector to manage network/process CRD rules
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: neuvector-binding-nvsecurityrules
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+rules:
+- apiGroups:
+  - neuvector.com
+  resources:
+  - nvsecurityrules
+  - nvclustersecurityrules
+  verbs:
+  - get
+  - list
+  - delete
+---
+# Source: core/templates/crd-role.yaml
+# ClusterRole for NeuVector to manage dlp CRD rules
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: neuvector-binding-nvdlpsecurityrules
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+rules:
+- apiGroups:
+  - neuvector.com
+  resources:
+  - nvdlpsecurityrules
+  verbs:
+  - get
+  - list
+  - delete
+---
+# Source: core/templates/crd-role.yaml
+# ClusterRole for NeuVector to manage admission control CRD rules
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: neuvector-binding-nvadmissioncontrolsecurityrules
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+rules:
+- apiGroups:
+  - neuvector.com
+  resources:
+  - nvadmissioncontrolsecurityrules
+  verbs:
+  - get
+  - list
+  - delete
+---
+# Source: core/templates/crd-role.yaml
+# ClusterRole for NeuVector to manage waf CRD rules
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: neuvector-binding-nvwafsecurityrules
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+rules:
+- apiGroups:
+  - neuvector.com
+  resources:
+  - nvwafsecurityrules
+  verbs:
+  - get
+  - list
+  - delete
+---
+# Source: core/templates/crd-role.yaml
+# ClusterRole for NeuVector to manage compliance CRD profiles
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: neuvector-binding-nvcomplianceprofiles
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+rules:
+- apiGroups:
+  - neuvector.com
+  resources:
+  - nvcomplianceprofiles
+  verbs:
+  - get
+  - list
+  - delete
+---
+# Source: core/templates/crd-role.yaml
+# ClusterRole for NeuVector to manage vulnerability CRD profiles
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: neuvector-binding-nvvulnerabilityprofiles
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+rules:
+- apiGroups:
+  - neuvector.com
+  resources:
+  - nvvulnerabilityprofiles
+  verbs:
+  - get
+  - list
+  - delete
+---
+# Source: core/templates/crd-role.yaml
+# ClusterRoleBinding for NeuVector to operate CRD
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: neuvector-binding-customresourcedefinition
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: neuvector-binding-customresourcedefinition
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: pham-test
+---
+# Source: core/templates/crd-role.yaml
+# ClusterRoleBinding for NeuVector to manage network/process CRD rules
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: neuvector-binding-nvsecurityrules
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: neuvector-binding-nvsecurityrules
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: pham-test
+---
+# Source: core/templates/crd-role.yaml
+# ClusterRoleBinding for NeuVector to manage admission control CRD rules
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: neuvector-binding-nvdlpsecurityrules
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: neuvector-binding-nvdlpsecurityrules
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: pham-test
+---
+# Source: core/templates/crd-role.yaml
+# ClusterRoleBinding for NeuVector to manage admission control CRD rules
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: neuvector-binding-nvadmissioncontrolsecurityrules
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: neuvector-binding-nvadmissioncontrolsecurityrules
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: pham-test
+---
+# Source: core/templates/crd-role.yaml
+# ClusterRoleBinding for NeuVector to manage waf CRD rules
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: neuvector-binding-nvwafsecurityrules
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: neuvector-binding-nvwafsecurityrules
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: pham-test
+---
+# Source: core/templates/crd-role.yaml
+# ClusterRoleBinding for NeuVector to manage compliance CRD profiles
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: neuvector-binding-nvcomplianceprofiles
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: neuvector-binding-nvcomplianceprofiles
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: pham-test
+---
+# Source: core/templates/crd-role.yaml
+# ClusterRoleBinding for NeuVector to manage vulnerability CRD profiles
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: neuvector-binding-nvvulnerabilityprofiles
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: neuvector-binding-nvvulnerabilityprofiles
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: pham-test
+---
+# Source: core/templates/crd-role.yaml
+# Clusterrolebinding for Neuvector to manage name referral for common groups
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: neuvector-binding-nvgroupdefinitions
+  labels:
+    chart: core-2.8.6
+    release: neuvector
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: neuvector-binding-nvgroupdefinitions
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: pham-test
